@@ -12,8 +12,19 @@ public class Adapter implements Target {
 
     private Adaptee adaptee;
 
+    /**
+     * 默认适配者
+     */
     public Adapter() {
         this.adaptee = new Adaptee();
+    }
+
+    /**
+     * 自定义适配者，客户端传入，可以把适配者类和它的子类都适配到目标接口。
+     * @param adaptee
+     */
+    public Adapter(Adaptee adaptee) {
+        this.adaptee = adaptee;
     }
 
     @Override

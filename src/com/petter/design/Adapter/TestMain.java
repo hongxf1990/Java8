@@ -6,7 +6,8 @@ package com.petter.design.Adapter;
  */
 public class TestMain {
     public static void main(String[] args) {
-        Target target = new Adapter();
+        Adaptee adaptee = new Adaptee();
+        Target target = new Adapter(adaptee);
         target.request();
         /*Target target = new Adapter2();
         target.request();*/
